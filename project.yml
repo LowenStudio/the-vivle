@@ -11,6 +11,15 @@ settings:
   base:
     SWIFT_VERSION: "5.0"
 
+fileGroups:
+  - .gitignore
+  - README.md
+  - project.yml
+  - Info.plist
+  - The Vivle.entitlements
+  - docs
+  - QA
+
 targets:
   The Vivle:
     type: application
@@ -23,10 +32,12 @@ targets:
       - path: ViewModels
       - path: Views
       - path: TheVivleApp.swift
-    resources:
       - path: Assets.xcassets
+        buildPhase: resources
       - path: Resources/Verses.json
+        buildPhase: resources
       - path: LaunchScreen.storyboard
+        buildPhase: resources
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.lowen.thevivle

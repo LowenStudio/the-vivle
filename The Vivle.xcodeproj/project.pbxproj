@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0267EE9E85DF894908C4146A /* Verses.json in Resources */ = {isa = PBXBuildFile; fileRef = 64FE284BEFABA0729703D373 /* Verses.json */; };
+		074A14F3762DEE5AE1E0C558 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF7F369D923D48B51CA7A03 /* LaunchScreen.storyboard */; };
 		0899656BBB96A43D7690D3F3 /* ComapctVerseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361BFFE99AEBFD3534DEAA8F /* ComapctVerseCard.swift */; };
 		0E0C30DFB49D4424AE982E0D /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC1562B306FBC50D6E0A120 /* FavoritesView.swift */; };
 		1097C5E60DABE46520AFC33C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF0CD67F27A3E4832548FF /* SettingsView.swift */; };
@@ -15,6 +17,7 @@
 		4C684C5BA912A2A07AE27909 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2AC18E878FC0AE37B8F5D /* HomeView.swift */; };
 		51070A3309C871175B141027 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB02C04124CF90D2967E0BB1 /* NotificationManager.swift */; };
 		794928C2D577A056002999CF /* VerseFolderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC4F26882AFEEB0AC6CE80A /* VerseFolderStore.swift */; };
+		7FF4715C40EEFF1A04641FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FAC2EFC70FDB90DDE7879E /* Assets.xcassets */; };
 		801EF3706B6EE5F10F9A1413 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0D65A3AD8EECAFF33042A8 /* LandingView.swift */; };
 		8B2843E8A502004A8BECC5F8 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FBF89D7B088DE6D67E152A /* UserDefaultsKey.swift */; };
 		93495CE05C36F4CA6BB2B58F /* VerseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B52D0D235BE6D0FCFCFA1 /* VerseViewModel.swift */; };
@@ -32,32 +35,67 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01FAC2EFC70FDB90DDE7879E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D4B409880560B093CF07FAF /* VerseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseDetailView.swift; sourceTree = "<group>"; };
+		1EA4E7FA0F5FAD39C293AB02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1EA8B0ACF8B036E9BB146C4D /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		20FBF89D7B088DE6D67E152A /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		25724DADDE689734C26FFD43 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		330A3132B993D7DF6908294D /* the-vivle-site.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-vivle-site.png"; sourceTree = "<group>"; };
 		361BFFE99AEBFD3534DEAA8F /* ComapctVerseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComapctVerseCard.swift; sourceTree = "<group>"; };
 		3AEF0CD67F27A3E4832548FF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3E5B7AE4D3C02282E3BE79B4 /* VerseSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseSelector.swift; sourceTree = "<group>"; };
+		43E79C60A14D1DAE986F7E53 /* project.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = project.yml; sourceTree = "<group>"; };
 		4E8C33084421111DDE3EB7A1 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		547204D90F66D9E0FF27BBA4 /* The Vivle.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "The Vivle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64FE284BEFABA0729703D373 /* Verses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Verses.json; sourceTree = "<group>"; };
 		72AE235F21D8A4160B7E21BF /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
 		73911D6869E5A1204D7966A8 /* LikedVerseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedVerseStore.swift; sourceTree = "<group>"; };
+		75BF4B7AABA9C6F295BA7722 /* .gitignore */ = {isa = PBXFileReference; path = .gitignore; sourceTree = "<group>"; };
 		811B52D0D235BE6D0FCFCFA1 /* VerseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseViewModel.swift; sourceTree = "<group>"; };
 		8DC2AC18E878FC0AE37B8F5D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9290E5967C3ABAF119D9D07B /* privacy.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = privacy.html; sourceTree = "<group>"; };
 		9C0D65A3AD8EECAFF33042A8 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		A044F36DCDF006FAA0955BAE /* VerseFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseFolder.swift; sourceTree = "<group>"; };
 		AB02C04124CF90D2967E0BB1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		ACC4F26882AFEEB0AC6CE80A /* VerseFolderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseFolderStore.swift; sourceTree = "<group>"; };
 		AF119E8743514E68B3DBA5C4 /* ScriptureVerse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptureVerse.swift; sourceTree = "<group>"; };
+		B5D69A208ADDAA521E3FEEB2 /* everyday-bible-home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "everyday-bible-home.png"; sourceTree = "<group>"; };
 		B9ED932ACE5FEA7F46DE4305 /* VerseLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseLoader.swift; sourceTree = "<group>"; };
+		C5169554B1703A2DFB84D296 /* about.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
+		C798A1CFD304A8270CBA1F10 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		CB8DE5CC06203D70DC84F037 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CC4EE5E5C4E56F30CA9C31CC /* The Vivle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "The Vivle.entitlements"; sourceTree = "<group>"; };
 		CF54DFE6C48B9E85FD9A618B /* TheVivleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheVivleApp.swift; sourceTree = "<group>"; };
 		DEC1562B306FBC50D6E0A120 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		E529068A98D5CFBB95A0C47D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E8CE60AB219DC151B486ADB4 /* support.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = support.html; sourceTree = "<group>"; };
 		EC887ECFAB0212D3DBC8981D /* ObboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObboardingView.swift; sourceTree = "<group>"; };
+		F1E42B404EE5B9E38AC2C9C4 /* styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
+		FFF7F369D923D48B51CA7A03 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		105A624245DC77EE197157AD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				64FE284BEFABA0729703D373 /* Verses.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2D613E8948E1A999E222EF04 /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				C5169554B1703A2DFB84D296 /* about.html */,
+				C798A1CFD304A8270CBA1F10 /* index.html */,
+				9290E5967C3ABAF119D9D07B /* privacy.html */,
+				F1E42B404EE5B9E38AC2C9C4 /* styles.css */,
+				E8CE60AB219DC151B486ADB4 /* support.html */,
+			);
+			path = docs;
+			sourceTree = "<group>";
+		};
 		4F5B42186B1038A8B7A55F29 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,14 +104,33 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		764044D05133D6636E9FEA54 /* QA */ = {
+			isa = PBXGroup;
+			children = (
+				B5D69A208ADDAA521E3FEEB2 /* everyday-bible-home.png */,
+				330A3132B993D7DF6908294D /* the-vivle-site.png */,
+			);
+			path = QA;
+			sourceTree = "<group>";
+		};
 		7E472D05DBA1AF5C95599720 = {
 			isa = PBXGroup;
 			children = (
 				E9EB3B35D330FAE2ED01A0B3 /* App */,
+				2D613E8948E1A999E222EF04 /* docs */,
 				80692F8B791C1251737B185B /* Models */,
+				764044D05133D6636E9FEA54 /* QA */,
+				105A624245DC77EE197157AD /* Resources */,
 				FE8276F1DB14D15F3056D74F /* Service */,
 				B409DDEBB9AD25B22379B5D9 /* ViewModels */,
 				E837024E6FA22730F5CC94C4 /* Views */,
+				75BF4B7AABA9C6F295BA7722 /* .gitignore */,
+				01FAC2EFC70FDB90DDE7879E /* Assets.xcassets */,
+				1EA4E7FA0F5FAD39C293AB02 /* Info.plist */,
+				FFF7F369D923D48B51CA7A03 /* LaunchScreen.storyboard */,
+				43E79C60A14D1DAE986F7E53 /* project.yml */,
+				CB8DE5CC06203D70DC84F037 /* README.md */,
+				CC4EE5E5C4E56F30CA9C31CC /* The Vivle.entitlements */,
 				CF54DFE6C48B9E85FD9A618B /* TheVivleApp.swift */,
 				4F5B42186B1038A8B7A55F29 /* Products */,
 			);
@@ -143,6 +200,7 @@
 			buildConfigurationList = 64CFE0CC1315CC09C3A4B778 /* Build configuration list for PBXNativeTarget "The Vivle" */;
 			buildPhases = (
 				15AF21CA436D5A8393513FC8 /* Sources */,
+				9BECD825D6F2077E57271405 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -187,6 +245,19 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BECD825D6F2077E57271405 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FF4715C40EEFF1A04641FCE /* Assets.xcassets in Resources */,
+				074A14F3762DEE5AE1E0C558 /* LaunchScreen.storyboard in Resources */,
+				0267EE9E85DF894908C4146A /* Verses.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		15AF21CA436D5A8393513FC8 /* Sources */ = {
