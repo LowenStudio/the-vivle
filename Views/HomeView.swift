@@ -13,7 +13,6 @@ struct HomeView: View {
     @State private var dragOffset: CGFloat = 0
     @State private var showCopiedMessage = false
     @AppStorage(UserDefaultsKey.appTheme) private var appTheme = AppTheme.system.rawValue
-    @AppStorage("selectedLanguage") private var selectedLanguage = AppLanguage.english.rawValue
 
     private var name: String {
         UserDefaults.standard.string(forKey: UserDefaultsKey.userName) ?? "User"
@@ -24,7 +23,7 @@ struct HomeView: View {
     }
 
     private var currentLanguage: AppLanguage {
-        AppLanguage(rawValue: selectedLanguage) ?? .english
+        .english
     }
 
     private var copiedText: String {

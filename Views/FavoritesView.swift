@@ -17,10 +17,8 @@ import SwiftUI
 
 struct FavoritesView: View {
     @ObservedObject var viewModel: VerseViewModel
-    @AppStorage("selectedLanguage") private var selectedLanguage = AppLanguage.english.rawValue
-
     private var currentLanguage: AppLanguage {
-        AppLanguage(rawValue: selectedLanguage) ?? .english
+        .english
     }
 
     private var navigationTitleText: String {

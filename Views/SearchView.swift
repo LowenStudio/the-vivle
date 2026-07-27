@@ -9,8 +9,6 @@ import SwiftUI
 
 struct SearchView: View {
     @ObservedObject var viewModel: VerseViewModel
-    @AppStorage("selectedLanguage") private var selectedLanguage = AppLanguage.english.rawValue
-
     @State private var bookTitle = ""
     @State private var chapterNumber = ""
     @State private var verseNumber = ""
@@ -19,7 +17,7 @@ struct SearchView: View {
     @State private var searchTask: Task<Void, Never>?
 
     private var currentLanguage: AppLanguage {
-        AppLanguage(rawValue: selectedLanguage) ?? .english
+        .english
     }
 
     private var navigationTitleText: String {
@@ -363,7 +361,6 @@ struct SearchView: View {
 
 private struct SearchVerseDetailView: View {
     @ObservedObject var viewModel: VerseViewModel
-    @AppStorage("selectedLanguage") private var selectedLanguage = AppLanguage.english.rawValue
     let verse: ScriptureVerse
 
     private var isLiked: Bool {
@@ -371,7 +368,7 @@ private struct SearchVerseDetailView: View {
     }
 
     private var currentLanguage: AppLanguage {
-        AppLanguage(rawValue: selectedLanguage) ?? .english
+        .english
     }
 
     private var navigationTitleText: String {

@@ -3,14 +3,13 @@ import SwiftUI
 struct SettingsView: View {
     @AppStorage(UserDefaultsKey.userName) private var userName = "User"
     @AppStorage(UserDefaultsKey.appTheme) private var appTheme = AppTheme.system.rawValue
-    @AppStorage("selectedLanguage") private var selectedLanguage = AppLanguage.english.rawValue
 
     private var selectedTheme: AppTheme {
         AppTheme(rawValue: appTheme) ?? .system
     }
 
     private var currentLanguage: AppLanguage {
-        AppLanguage(rawValue: selectedLanguage) ?? .english
+        .english
     }
 
     private var settingsTitleText: String {
@@ -46,20 +45,6 @@ struct SettingsView: View {
         switch currentLanguage {
         case .english: return "App Theme"
         case .spanish: return "Tema de la app"
-        }
-    }
-
-    private var languageText: String {
-        switch currentLanguage {
-        case .english: return "Language"
-        case .spanish: return "Idioma"
-        }
-    }
-
-    private var appLanguageText: String {
-        switch currentLanguage {
-        case .english: return "App Language"
-        case .spanish: return "Idioma de la app"
         }
     }
 
@@ -277,7 +262,6 @@ struct SettingsView: View {
                 profileSection
                 // upgradeSection
                 themeSection
-                languageSection
                 contentLegalSection
 
                 Spacer(minLength: 40)
@@ -367,26 +351,10 @@ struct SettingsView: View {
 
             Picker(appThemeText, selection: $appTheme) {
                 ForEach(AppTheme.allCases) { theme in
-                    Text(theme.title(for: currentLanguage)).tag(theme.rawValue)
+                    Text(theme.title).tag(theme.rawValue)
                 }
             }
             .pickerStyle(.segmented)
-            .padding(16)
-            .background(Color(.secondarySystemBackground))
-            .cornerRadius(16)
-        }
-    }
-
-    private var languageSection: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            sectionHeader(languageText)
-
-            Picker(appLanguageText, selection: $selectedLanguage) {
-                ForEach(AppLanguage.allCases) { language in
-                    Text(language.title).tag(language.rawValue)
-                }
-            }
-            .pickerStyle(.navigationLink)
             .padding(16)
             .background(Color(.secondarySystemBackground))
             .cornerRadius(16)
