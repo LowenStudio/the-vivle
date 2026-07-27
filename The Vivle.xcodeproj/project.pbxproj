@@ -47,7 +47,6 @@
 		3E5B7AE4D3C02282E3BE79B4 /* VerseSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseSelector.swift; sourceTree = "<group>"; };
 		43E79C60A14D1DAE986F7E53 /* project.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = project.yml; sourceTree = "<group>"; };
 		4E8C33084421111DDE3EB7A1 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
-		547204D90F66D9E0FF27BBA4 /* The Vivle.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "The Vivle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64FE284BEFABA0729703D373 /* Verses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Verses.json; sourceTree = "<group>"; };
 		72AE235F21D8A4160B7E21BF /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
 		73911D6869E5A1204D7966A8 /* LikedVerseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedVerseStore.swift; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		9290E5967C3ABAF119D9D07B /* privacy.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = privacy.html; sourceTree = "<group>"; };
 		9C0D65A3AD8EECAFF33042A8 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		A044F36DCDF006FAA0955BAE /* VerseFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseFolder.swift; sourceTree = "<group>"; };
+		A984B677181705FBF4832D70 /* TheVivle.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = TheVivle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB02C04124CF90D2967E0BB1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		ACC4F26882AFEEB0AC6CE80A /* VerseFolderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseFolderStore.swift; sourceTree = "<group>"; };
 		AF119E8743514E68B3DBA5C4 /* ScriptureVerse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptureVerse.swift; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		4F5B42186B1038A8B7A55F29 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				547204D90F66D9E0FF27BBA4 /* The Vivle.app */,
+				A984B677181705FBF4832D70 /* TheVivle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 			packageProductDependencies = (
 			);
 			productName = "The Vivle";
-			productReference = 547204D90F66D9E0FF27BBA4 /* The Vivle.app */;
+			productReference = A984B677181705FBF4832D70 /* TheVivle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -223,6 +223,7 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					74EE1F7A552883BA3AC0C8F1 = {
+						DevelopmentTeam = ZF5PMUPRZQ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -300,6 +301,7 @@
 				CODE_SIGN_ENTITLEMENTS = "The Vivle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZF5PMUPRZQ;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -323,6 +325,7 @@
 				CODE_SIGN_ENTITLEMENTS = "The Vivle.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZF5PMUPRZQ;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;

@@ -24,6 +24,7 @@ targets:
   The Vivle:
     type: application
     platform: iOS
+    productName: TheVivle
     deploymentTarget: "17.0"
     sources:
       - path: App
@@ -50,6 +51,7 @@ targets:
         TARGETED_DEVICE_FAMILY: "1,2"
         SUPPORTS_MACCATALYST: NO
         CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ZF5PMUPRZQ
 
 schemes:
   The Vivle:
