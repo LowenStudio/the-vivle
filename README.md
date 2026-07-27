@@ -2,6 +2,12 @@
 
 The Vivle is a quiet, local-first Christian Bible app for iPhone and iPad.
 
+## Open in Xcode
+
+Open `The Vivle.xcodeproj`, select the **The Vivle** scheme, choose an iPhone
+simulator, and run the app. The project file is generated from `project.yml`
+with [XcodeGen](https://github.com/yonaskolb/XcodeGen).
+
 ## Features
 
 - Complete 66-book King James Version Bible
