@@ -12,6 +12,7 @@ final class VerseViewModel: ObservableObject {
         }
     }
     @Published private(set) var likedVerseIDs: Set<String> = LikedVerseStore.loadLikedVerseIDs()
+    @Published private(set) var verseFolders: [VerseFolder] = VerseFolderStore.loadFolders()
     @Published private(set) var remainingTimeText = ""
 
     private var refreshTask: Task<Void, Never>?
@@ -24,6 +25,42 @@ final class VerseViewModel: ObservableObject {
 
     var likedVerses: [ScriptureVerse] {
         verses.filter { likedVerseIDs.contains($0.id) }
+    }
+
+    func verses(in folder: VerseFolder) -> [ScriptureVerse] {
+        likedVerses.filter { folder.verseIDs.contains($0.id) }
+    }
+
+    func createFolder(named name: String) {
+        let cleanedName = name.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !cleanedName.isEmpty else { return }
+        guard !verseFolders.contains(where: { $0.name.localizedCaseInsensitiveCompare(cleanedName) == .orderedSame }) else {
+            return
+        }
+
+        verseFolders.append(VerseFolder(name: cleanedName))
+        saveFolders()
+    }
+
+    func deleteFolder(_ folder: VerseFolder) {
+        verseFolders.removeAll { $0.id == folder.id }
+        saveFolders()
+    }
+
+    func isVerse(_ verse: ScriptureVerse, in folder: VerseFolder) -> Bool {
+        folder.verseIDs.contains(verse.id)
+    }
+
+    func setVerse(_ verse: ScriptureVerse, in folder: VerseFolder, isIncluded: Bool) {
+        guard let index = verseFolders.firstIndex(where: { $0.id == folder.id }) else { return }
+
+        if isIncluded {
+            verseFolders[index].verseIDs.insert(verse.id)
+        } else {
+            verseFolders[index].verseIDs.remove(verse.id)
+        }
+
+        saveFolders()
     }
 
     func searchVerses(query: String) -> [ScriptureVerse] {
@@ -172,16 +209,29 @@ final class VerseViewModel: ObservableObject {
     func unlike(_ verse: ScriptureVerse) {
         likedVerseIDs.remove(verse.id)
         LikedVerseStore.saveLikedVerseIDs(likedVerseIDs)
+        removeVerseFromFolders(verse)
     }
 
     func toggleLike(for verse: ScriptureVerse) {
         if likedVerseIDs.contains(verse.id) {
             likedVerseIDs.remove(verse.id)
+            removeVerseFromFolders(verse)
         } else {
             likedVerseIDs.insert(verse.id)
         }
 
         LikedVerseStore.saveLikedVerseIDs(likedVerseIDs)
+    }
+
+    private func removeVerseFromFolders(_ verse: ScriptureVerse) {
+        for index in verseFolders.indices {
+            verseFolders[index].verseIDs.remove(verse.id)
+        }
+        saveFolders()
+    }
+
+    private func saveFolders() {
+        VerseFolderStore.saveFolders(verseFolders)
     }
 
     private func saveCurrentVerseForWidget() {
